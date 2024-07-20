@@ -23,6 +23,13 @@ class Effect {
         this.canvas =canvas;
         this.width = this.canvas.width;
         this.height = this.canvas.height;
+        this.particle = [];
+        this.numberOfParticles = 20;
+    }
+    createParticles(){
+        for(let i = 0; i < this.numberOfParticles; i++){
+            this.particle.push(new Particle());
+        }
     }
 }
 
