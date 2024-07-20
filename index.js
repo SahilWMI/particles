@@ -5,11 +5,16 @@ canvas.width = window.innerWidth;
 console.log(ctx);
 
 class Particle {
-
+    constructor(effect){
+        this.effect = effect;
+        this.x = math.random() * this.effect.width;
+        this.y = Math.random() *this.effect.height;
+        this.radius = 15;
+    }
 }
 
 class Effect {
-
+  
 }
 
 function animate(){
