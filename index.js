@@ -25,13 +25,20 @@ class Effect {
         this.height = this.canvas.height;
         this.particle = [];
         this.numberOfParticles = 20;
+        this.createParticles();
     }
     createParticles(){
         for(let i = 0; i < this.numberOfParticles; i++){
-            this.particle.push(new Particle());
+            this.particle.push(new Particle(this));
+        }
+        handleParticles(context){
+            this.Particles.forEach(particle => {
+                particle.draw(context);
+            });
         }
     }
 }
+const effect = new effect(canvas);
 
 function animate(){
 
